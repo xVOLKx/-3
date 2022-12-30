@@ -1,0 +1,77 @@
+Car
+
+.main{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(10% - 100px); 
+    transform-origin: center top;
+
+    /* АНИМАЦИЯ ПРИ ЗАГРУЗКИ СТРАНИЦЫ */
+    animation-name: drive;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function:ease;
+    animation-delay:inherit;
+    animation-fill-mode:forwards;
+}
+.car-upper{
+    width: 200px;
+    height: 100px;
+    position: relative;
+    z-index: -1;
+}
+.window{
+    width: 0px;
+    height: 20px;
+    border-right: 125px solid transparent;
+    border-bottom: 65px solid rgb(0, 0, 0);
+    position: relative;
+    left: 1px;
+}
+.cabine{
+    width: 0px;
+    height: 20px;
+    border-left: 200px solid transparent;
+    border-right: 143px solid transparent;
+    border-bottom: 68px solid rgb(9, 43, 113);
+}
+.fottoro{
+    width: 200px;
+    border-left: 5px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 45px solid rgb(65, 83, 142);
+}
+.car-footer{
+    width: 207px;
+    height: 54px;
+    position: relative;
+    z-index: 1;
+}
+.wheels{
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    /* Свойство CSS aspect-ratio задает предпочтительное соотношение сторон для блока, которое будет использоваться при расчете автоматических размеров и некоторых других функциях макета. */
+	background: black;
+    bottom: 1px;
+	border-radius: 50px;
+}
+.wheels.left{
+    left: 8%;
+}
+.wheels.right{
+    right: 5%;
+}
+
+/* ANIMATION */
+
+@keyframes drive {
+    25% {
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(calc(80vw - 50px), 0);
+    }
+}
